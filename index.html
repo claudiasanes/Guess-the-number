@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/main.css" rel="stylesheet" />
+    <title>Guess the number</title>
+  </head>
+  <body>
+    <h1 class="tittle">Adivina el número</h1>
+    <form class="form">
+      <label for="number" class="text">Introduce aquí tu número:</label>
+      <input id="number" name="number" value="" class="input js-input" />
+      <button class="button js-button">Prueba</button>
+    </form>
+    <div class="container">
+      <p class="text js-clue">Pista: escribe el número y dale a prueba</p>
+    </div>
+    <div class="container">
+      <p class="text">
+        Número de intentos: <span class="text js-counter">0</span>
+      </p>
+    </div>
+
+    <script src="./js/main.js" type="text/javascript"></script>
+  </body>
+</html>

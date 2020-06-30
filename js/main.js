@@ -16,15 +16,16 @@ console.log(randomNumber);
 function guessTheNumber(ev) {
   ev.preventDefault();
   let inputValue = input.value;
-  if (inputValue > randomNumber) {
+
+  if (inputValue > 100 || inputValue < 1) {
+    updateCounter();
+    clue.innerHTML = 'El número debe estar entre 1 y 100';
+  } else if (inputValue > randomNumber) {
     updateCounter();
     clue.innerHTML = 'Demasiado alto';
   } else if (inputValue < randomNumber) {
     updateCounter();
     clue.innerHTML = 'Demasiado bajo';
-  } else if (inputValue >= 101 || inputValue <= -1) {
-    updateCounter();
-    clue.innerHTML = 'El número debe estar entre 1 y 100';
   } else {
     updateCounter();
     clue.innerHTML = 'Has ganado campeona!!!';

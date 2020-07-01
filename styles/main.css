@@ -1,33 +1,78 @@
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-.body {
+.bg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    Violet,
+    SlateBlue,
+    CornflowerBlue,
+    SkyBlue
+  );
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: SlateBlue;
 }
 
 .tittle {
   font-family: 'Righteous';
   font-size: 64px;
-  color: white;
+  color: black;
   margin: 10px 20px;
 }
 
 .crystal-ball {
-  background-color: Thistle;
+  position: relative;
+  background-color: #d8bfd8;
   /* border: 6px solid MediumPurple; */
   padding: 40px;
   width: 600px;
   height: 600px;
   border-radius: 50%;
+  border: 3px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-box-shadow: inset -22px -20px 78px -34px rgba(99, 39, 168, 1);
+  -moz-box-shadow: inset -22px -20px 78px -34px rgba(99, 39, 168, 1);
+  box-shadow: inset -22px -20px 78px -34px rgba(99, 39, 168, 1);
+}
+
+.img-container {
+  width: 220px;
+  position: absolute;
+  top: 10px;
+  left: -100px;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
 }
 
 .form {
@@ -66,7 +111,8 @@
 }
 
 .container {
-  border: 6px dashed MediumSlateBlue;
+  border: 3px dashed MediumSlateBlue;
+
   margin-top: 16px;
   border-radius: 6px;
 }
@@ -75,7 +121,7 @@
   font-family: sans-serif;
   font-size: 24px;
   color: white;
-  padding: 0 12px;
+  padding: 12px;
   text-align: center;
 }
 

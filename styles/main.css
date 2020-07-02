@@ -4,15 +4,16 @@
   padding: 0px;
 }
 
-.bg {
+body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(
     -45deg,
-    Violet,
     SlateBlue,
-    CornflowerBlue,
-    SkyBlue
+    Violet,
+    MediumPurple,
+    plum,
+    RebeccaPurple
   );
   background-size: 400% 400%;
   position: relative;
@@ -21,17 +22,27 @@
 
 @keyframes change {
   0% {
-    background-position: 0 50%;
+    background-position: 0% 50%;
+    rotate: 50deg;
   }
-  50% {
-    background-position: 100% 50%;
+  35% {
+    background-position: 50% 80%;
+    rotate: 20deg;
   }
+
+  65% {
+    background-position: 80% 50%;
+    rotate: -40deg;
+  }
+
   100% {
-    background-position: 0 50%;
+    background-position: 0% 50%;
+    rotate: 50deg;
   }
 }
 
 .wrapper {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +53,7 @@
   font-family: 'Righteous';
   font-size: 64px;
   color: black;
-  margin: 10px 20px;
+  padding-bottom: 80px;
 }
 
 .crystal-ball {
@@ -53,7 +64,7 @@
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 4px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,17 +74,48 @@
   box-shadow: inset -22px -20px 78px -34px rgba(99, 39, 168, 1);
 }
 
-.img-container {
-  width: 220px;
+.light {
+  width: 600px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  z-index: 1;
+  rotate: 20deg;
+}
+
+.star-1 {
+  width: 200px;
   position: absolute;
   top: 10px;
-  left: -100px;
+  left: -50px;
   z-index: 1;
 }
 
-img {
-  width: 100%;
+.star-2 {
+  width: 120px;
+  position: absolute;
+  top: 200px;
+  left: -60px;
+  z-index: 1;
 }
+
+.star-3 {
+  width: 120px;
+  position: absolute;
+  top: 500px;
+  left: 600px;
+  z-index: 1;
+}
+
+/* .circle {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  background-color: violet;
+  z-index: 0;
+} */
 
 .form {
   display: flex;
@@ -81,6 +123,7 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
+  z-index: 1;
 }
 
 .input {
@@ -91,14 +134,15 @@ img {
   border: none;
   background-color: #edd8ed;
   border-radius: 6px;
+  z-index: 1;
 }
 
 .input::value {
   color: white;
+  z-index: 1;
 }
 
 .button {
-  padding: 10px 40px;
   height: 50px;
   width: 120px;
   background-color: MediumSlateBlue;
@@ -108,24 +152,31 @@ img {
   margin: 10px 20px;
   font-family: sans-serif;
   font-size: 16px;
+  z-index: 1;
 }
 
 .container {
-  border: 3px dashed MediumSlateBlue;
+  border: 3px dashed white;
 
   margin-top: 16px;
   border-radius: 6px;
+  z-index: 1;
 }
 
 .text {
   font-family: sans-serif;
   font-size: 24px;
-  color: white;
+  color: MediumSlateBlue;
   padding: 12px;
   text-align: center;
+  z-index: 1;
 }
 
 .number {
-  color: MediumSlateBlue;
+  color: black;
   font-weight: bold;
+}
+
+.try {
+  padding-top: 20px;
 }

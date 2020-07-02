@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="299px" height="299px" viewBox="0 0 299 299" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard Copy</title>
+    <defs>
+        <path d="M41,11 C57.3511453,40.2941582 88.8794394,60.1338589 125.090321,60.1338589" id="path-1"></path>
+    </defs>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(125.000000, 20.000000)">
+            <g id="Path" stroke-linecap="round" transform="translate(83.045160, 35.566929) rotate(-180.000000) translate(-83.045160, -35.566929) ">
+                <use stroke="#25242F" stroke-width="17" xlink:href="#path-1"></use>
+                <use stroke="#FFFFFF" stroke-width="13" xlink:href="#path-1"></use>
+            </g>
+            <ellipse id="Oval" stroke="#25242F" stroke-width="2" fill="#FFFFFF" cx="9.5" cy="9" rx="9.5" ry="9"></ellipse>
+        </g>
+    </g>
+</svg>

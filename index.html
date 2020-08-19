@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
    
-      <h1 class="tittle">Adivina el número</h1>
+      <h1 class="tittle">Guess the number</h1>
       <div class="crystal-ball">
         <div class="circle"></div>
         <!-- <img src="./images/light.svg" tittle="light" class="light" /> -->
@@ -20,15 +20,16 @@
   
 
         <form class="form">
-          <label for="number" class="text text-1">Introduce aquí tu número:</label>
+          <label for="number" class="text text-1">Introduce a number here:</label>
           <input id="number" name="number" value="" class="input js-input" placeholder="48" />
-          <button class="button js-button">Prueba</button>
+          <button class="button js-button">Try</button>
           <div class="container">
-            <p class="text js-clue">Pista: escribe el número y dale a prueba</p>
+            <p class="text js-clue">Clue: write a number and click on the button</p>
           </div>
           <p class="text try">
-            Intentos:<span class="text number js-counter">0</span>
+            Attemps:<span class="text number js-counter">0</span>
           </p>
+          <button class="reset-button js-reset">Reset</button>
         </form>
         
       </div>

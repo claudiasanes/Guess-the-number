@@ -3,6 +3,7 @@
 const input = document.querySelector('.js-input');
 const clue = document.querySelector('.js-clue');
 const counter = document.querySelector('.js-counter');
+const resetButton = document.querySelector('.js-reset');
 
 function addButtonListener() {
   const btn = document.querySelector('.js-button');
@@ -21,16 +22,16 @@ function guessTheNumber(ev) {
   let inputValue = input.value;
   if (inputValue > 100 || inputValue < 1) {
     updateCounter();
-    clue.innerHTML = 'El número debe estar entre 1 y 100 🙂';
+    clue.innerHTML = 'It must be between 1 and 100 🙂';
   } else if (inputValue > randomNumber) {
     updateCounter();
-    clue.innerHTML = 'Demasiado alto 😉';
+    clue.innerHTML = "The number it's too low 😉";
   } else if (inputValue < randomNumber) {
     updateCounter();
-    clue.innerHTML = 'Demasiado bajo 😉';
+    clue.innerHTML = "the number it's too high 😉";
   } else {
     updateCounter();
-    clue.innerHTML = '🔮Lo has adivinado 🔮';
+    clue.innerHTML = '🔮You guessed it, genious 🔮';
   }
 }
 
@@ -39,3 +40,9 @@ function updateCounter() {
   counterNumber = counterNumber + 1;
   counter.innerHTML = counterNumber;
 }
+
+function reload() {
+  location.reload();
+}
+
+resetButton.addEventListener('click', reload);
